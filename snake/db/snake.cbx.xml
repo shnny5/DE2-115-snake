@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="snake">
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_0jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_3bm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|game_control:game_ctrl|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_tim.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_0jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_3bm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|seg7_display:score_display|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_ihm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|game_control:game_ctrl|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_lhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|game_control:game_ctrl|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_fcm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_jkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|seg7_display:score_display|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_l9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|game_control:game_ctrl|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_7bm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_2jm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|snake_game_top|lcd_messages:lcd_ctrl|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_6bm.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

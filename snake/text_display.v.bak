@@ -1,0 +1,68 @@
+module text_display(
+    input [9:0] pixel_x,
+    input [9:0] pixel_y,
+    output reg [23:0] rgb_out
+);
+    // 文字显示参数
+    parameter CHAR_WIDTH = 8;    // 每个字符宽度
+    parameter CHAR_HEIGHT = 16;  // 每个字符高度
+    parameter TEXT_X = 280;      // 文字起始X坐标
+    parameter TEXT_Y = 220;      // 文字起始Y坐标
+    parameter BLACK = 24'h000000;
+    parameter WHITE = 24'hFFFFFF;
+
+    // ROM存储字符位图数据
+    reg [7:0] char_L [0:15];
+    reg [7:0] char_O [0:15];
+    reg [7:0] char_A [0:15];
+    reg [7:0] char_D [0:15];
+    reg [7:0] char_G [0:15];
+    reg [7:0] char_M [0:15];
+    reg [7:0] char_E [0:15];
+    reg [7:0] char_space [0:15];
+    
+    // 用于计算当前字符位置
+    wire [3:0] char_index;
+    wire [3:0] char_row;
+    wire [2:0] char_col;
+    reg [7:0] current_char [0:15];
+    
+    // 计算相对位置
+    assign char_index = (pixel_x - TEXT_X) / CHAR_WIDTH;
+    assign char_row = pixel_y - TEXT_Y;
+    assign char_col = (pixel_x - TEXT_X) % CHAR_WIDTH;
+
+    // 初始化字符数据
+    initial begin
+        // [此处是之前的字符数据初始化代码，和上一条消息中的完全一样]
+    end
+
+    // 文字显示逻辑
+    always @(*) begin
+        // 默认黑色背景
+        rgb_out = BLACK;
+        
+        // 检查是否在文字显示区域
+        if(pixel_y >= TEXT_Y && pixel_y < TEXT_Y + CHAR_HEIGHT &&
+           pixel_x >= TEXT_X && pixel_x < TEXT_X + 9 * CHAR_WIDTH) begin
+            
+            // 根据位置选择当前要显示的字符
+            case(char_index)
+                0: current_char = char_L;
+                1: current_char = char_O;
+                2: current_char = char_A;
+                3: current_char = char_D;
+                4: current_char = char_space;
+                5: current_char = char_G;
+                6: current_char = char_A;
+                7: current_char = char_M;
+                8: current_char = char_E;
+                default: current_char = char_space;
+            endcase
+            
+            // 如果当前像素是字符的一部分，显示白色
+            if(current_char[char_row][7-char_col])
+                rgb_out = WHITE;
+        end
+    end
+endmodule

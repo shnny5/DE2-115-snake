@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at snake_game_top.v(118): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at lcd_messages.v(222): extended using "x" or "z"

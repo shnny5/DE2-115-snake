@@ -1,0 +1,28 @@
+
+State Machine - |snake_game_top|lcd_messages:lcd_ctrl|mLCD_ST
+Name mLCD_ST.000011 mLCD_ST.000010 mLCD_ST.000001 mLCD_ST.000000 
+mLCD_ST.000000 0 0 0 0 
+mLCD_ST.000001 0 0 1 1 
+mLCD_ST.000010 0 1 0 1 
+mLCD_ST.000011 1 0 0 1 
+
+State Machine - |snake_game_top|lcd_messages:lcd_ctrl|lcd_controller:u0|ST
+Name ST.11 ST.10 ST.01 ST.00 
+ST.00 0 0 0 0 
+ST.01 0 0 1 1 
+ST.10 0 1 0 1 
+ST.11 1 0 0 1 
+
+State Machine - |snake_game_top|game_control:game_ctrl|next_direction
+Name next_direction.00 next_direction.10 next_direction.01 next_direction.11 
+next_direction.11 0 0 0 0 
+next_direction.01 0 0 1 1 
+next_direction.10 0 1 0 1 
+next_direction.00 1 0 0 1 
+
+State Machine - |snake_game_top|game_control:game_ctrl|direction
+Name direction.00 direction.10 direction.01 direction.11 
+direction.11 0 0 0 0 
+direction.01 0 0 1 1 
+direction.10 0 1 0 1 
+direction.00 1 0 0 1 
